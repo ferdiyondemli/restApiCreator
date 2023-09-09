@@ -1,0 +1,10 @@
+server:
+  port: 1187
+spring:
+  application:
+    name: restApiCreator
+logging:
+  level:
+    sql: trace
+    root: info
+    web: info

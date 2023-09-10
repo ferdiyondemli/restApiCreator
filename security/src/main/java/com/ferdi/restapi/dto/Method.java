@@ -1,6 +1,5 @@
 package com.ferdi.restapi.dto;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,4 +15,7 @@ public class Method {
     String implementation;
 
     List<Parametre> parametres;
+
+    List<String> annotations;
+
 }

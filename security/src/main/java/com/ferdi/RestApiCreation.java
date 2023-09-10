@@ -1,4 +1,4 @@
-package com.ferdi.restapi;
+package com.ferdi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

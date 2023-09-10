@@ -1,8 +1,8 @@
 package com.ferdi.hbs.fileCreation;
 
-import com.ferdi.restapi.dto.Field;
-import com.ferdi.restapi.dto.JavaFile;
-import com.ferdi.restapi.dto.Method;
+import com.ferdi.fileCreator.fileComponent.Field;
+import com.ferdi.fileCreator.fileComponent.JavaFile;
+import com.ferdi.fileCreator.fileComponent.Method;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

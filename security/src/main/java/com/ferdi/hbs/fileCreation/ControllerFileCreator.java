@@ -1,6 +1,6 @@
 package com.ferdi.hbs.fileCreation;
 
-import com.ferdi.restapi.dto.*;
+import com.ferdi.fileCreator.fileComponent.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,15 +12,166 @@ import java.util.List;
 public class ControllerFileCreator {
 
     private final FileCreatorUtil util;
-  public   DirectoryFile getDirectoryFileController(JavaFile javaFile, String path) {
+
+    public DirectoryFile getDirectoryFileController(JavaFile javaFile, String path) {
         DirectoryFile hbsController = new DirectoryFile();
         hbsController.setDirectoryName("controller");
         hbsController.setDirectoryPath(path + "/" + javaFile.getJavaName());
-        //javafile
+
+
+        //javafile controller
         List<JavaFile> javaFilesController = new ArrayList<>();
         javaFilesController.add(createControllerJavaFile(javaFile));
         hbsController.setJavaFiles(javaFilesController);
+
+
+        //dto dir
+        DirectoryFile hbsControllerDto = new DirectoryFile();
+        hbsControllerDto.setDirectoryName("dto");
+        hbsControllerDto.setDirectoryPath(path + "/" + javaFile.getJavaName());
+
+        //dto  EkleRequestDTO
+        List<JavaFile> javaFilesDtos = new ArrayList<>();
+        javaFilesDtos.add(createEkleRequestDTOJavaFile(javaFile));
+
+       //dto  EkleRequestDTO
+         javaFilesDtos.add(createGuncelleRequestDTOJavaFile(javaFile));
+
+        //dto  ResponseDTO
+        javaFilesDtos.add(createResponseDTOJavaFile(javaFile));
+
+
+        hbsControllerDto.setJavaFiles(javaFilesDtos);
+
+
+        hbsController.setDirectoryFiles(List.of(hbsControllerDto));
+
+
         return hbsController;
+    }
+
+    private JavaFile createGuncelleRequestDTOJavaFile(JavaFile entityJavaFile) {
+
+        JavaFile entityTemp = new JavaFile();
+
+        //name etc
+        entityTemp.setJavaName(util.capitilizeFirstLetter(entityJavaFile.getJavaName())+"GuncelleRequestDTO");
+        entityTemp.setType("class");
+        entityTemp.setImplementedInterfaces(List.of("Serializable"));
+        entityTemp.setAnnotations(List.of(
+                "Getter",
+                "Setter",
+                "NoArgsConstructor",
+                "AllArgsConstructor"
+
+        ));
+         //fields
+        List<Field> fields = new ArrayList<>();
+        for (int i = 0; i < entityJavaFile.getFields().size(); i++) {
+            Field temp = new Field();
+            temp.setType(entityJavaFile.getFields().get(i).getType());
+            temp.setName(entityJavaFile.getFields().get(i).getName());
+            temp.setAccessModifier("private");
+            fields.add(temp);
+        }
+
+        //id
+        Field tempId = new Field();
+        tempId.setType("Long");
+        tempId.setName("id");
+        tempId.setAccessModifier("private");
+        fields.add(tempId);
+
+        //version
+        Field tempVersion= new Field();
+        tempVersion.setType("Integer");
+        tempVersion.setName("version");
+        tempVersion.setAccessModifier("private");
+        fields.add(tempVersion);
+
+
+        entityTemp.setFields(fields);
+
+
+        return entityTemp;
+    }
+
+    private JavaFile createResponseDTOJavaFile(JavaFile entityJavaFile) {
+
+        JavaFile entityTemp = new JavaFile();
+
+        //name etc
+        entityTemp.setJavaName(util.capitilizeFirstLetter(entityJavaFile.getJavaName())+"ResponseDTO");
+        entityTemp.setType("class");
+        entityTemp.setImplementedInterfaces(List.of("Serializable"));
+        entityTemp.setAnnotations(List.of(
+                "Getter",
+                "Setter",
+                "NoArgsConstructor",
+                "AllArgsConstructor"
+
+        ));
+         //fields
+        List<Field> fields = new ArrayList<>();
+        for (int i = 0; i < entityJavaFile.getFields().size(); i++) {
+            Field temp = new Field();
+            temp.setType(entityJavaFile.getFields().get(i).getType());
+            temp.setName(entityJavaFile.getFields().get(i).getName());
+            temp.setAccessModifier("private");
+            fields.add(temp);
+        }
+
+        //id
+        Field tempId = new Field();
+        tempId.setType("Long");
+        tempId.setName("id");
+        tempId.setAccessModifier("private");
+        fields.add(tempId);
+
+        //version
+        Field tempVersion= new Field();
+        tempVersion.setType("Integer");
+        tempVersion.setName("version");
+        tempVersion.setAccessModifier("private");
+        fields.add(tempVersion);
+
+
+        entityTemp.setFields(fields);
+
+
+        return entityTemp;
+    }
+
+    private JavaFile createEkleRequestDTOJavaFile(JavaFile entityJavaFile) {
+
+        JavaFile entityTemp = new JavaFile();
+
+        //name etc
+        entityTemp.setJavaName(util.capitilizeFirstLetter(entityJavaFile.getJavaName())+"EkleRequestDTO");
+        entityTemp.setType("class");
+        entityTemp.setImplementedInterfaces(List.of("Serializable"));
+        entityTemp.setAnnotations(List.of(
+                "Getter",
+                "Setter",
+                "NoArgsConstructor",
+                "AllArgsConstructor"
+
+        ));
+
+        //fields
+        List<Field> fields = new ArrayList<>();
+        for (int i = 0; i < entityJavaFile.getFields().size(); i++) {
+            Field temp = new Field();
+            temp.setType(entityJavaFile.getFields().get(i).getType());
+            temp.setName(entityJavaFile.getFields().get(i).getName());
+            temp.setAccessModifier("private");
+            fields.add(temp);
+        }
+
+        entityTemp.setFields(fields);
+
+
+        return entityTemp;
     }
 
     public JavaFile createControllerJavaFile(JavaFile entityJavaFile) {

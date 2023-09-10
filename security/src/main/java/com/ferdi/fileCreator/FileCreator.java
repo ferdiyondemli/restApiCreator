@@ -1,6 +1,6 @@
-package com.ferdi.restapi;
+package com.ferdi.fileCreator;
 
-import com.ferdi.restapi.dto.*;
+import com.ferdi.fileCreator.fileComponent.*;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

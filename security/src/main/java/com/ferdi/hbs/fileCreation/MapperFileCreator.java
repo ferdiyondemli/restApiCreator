@@ -1,6 +1,6 @@
 package com.ferdi.hbs.fileCreation;
 
-import com.ferdi.restapi.dto.*;
+import com.ferdi.fileCreator.fileComponent.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
-package com.ferdi.restapi.dto;
+package com.ferdi.fileCreator.fileComponent;
 
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

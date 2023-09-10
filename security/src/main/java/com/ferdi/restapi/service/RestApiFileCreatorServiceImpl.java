@@ -1,7 +1,7 @@
 package com.ferdi.restapi.service;
 
-import com.ferdi.restapi.FileCreator;
-import com.ferdi.restapi.dto.*;
+import com.ferdi.fileCreator.FileCreator;
+import com.ferdi.fileCreator.fileComponent.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

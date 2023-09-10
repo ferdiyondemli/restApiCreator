@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class Method {
@@ -12,4 +14,6 @@ public class Method {
     String returnType;
     String name;
     String implementation;
+
+    List<Parametre> parametres;
 }

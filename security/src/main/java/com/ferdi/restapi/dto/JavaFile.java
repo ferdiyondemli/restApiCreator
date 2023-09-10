@@ -11,6 +11,8 @@ import java.util.List;
 @Setter
 public class JavaFile {
 
+    List<String> annotations;
+
     String javaName;
     String extenedClass;
     List<String> implementedInterfaces;

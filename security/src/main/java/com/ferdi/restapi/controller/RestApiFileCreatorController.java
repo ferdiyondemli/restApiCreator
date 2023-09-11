@@ -18,8 +18,9 @@ public class RestApiFileCreatorController {
     }
     @GetMapping("/createRestApiFiles")
     public String   loadClientCodes() {
-        return "Deneme";
+        return "index.html";
     }
+
 
     @GetMapping("/test")
     @ResponseBody

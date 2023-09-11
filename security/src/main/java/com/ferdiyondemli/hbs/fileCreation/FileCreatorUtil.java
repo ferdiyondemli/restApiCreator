@@ -1,8 +1,8 @@
-package com.ferdi.hbs.fileCreation;
+package com.ferdiyondemli.hbs.fileCreation;
 
-import com.ferdi.fileCreator.fileComponent.Field;
-import com.ferdi.fileCreator.fileComponent.JavaFile;
-import com.ferdi.fileCreator.fileComponent.Method;
+import com.ferdiyondemli.fileCreator.fileComponent.Field;
+import com.ferdiyondemli.fileCreator.fileComponent.JavaFile;
+import com.ferdiyondemli.fileCreator.fileComponent.Method;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

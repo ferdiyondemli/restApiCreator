@@ -1,6 +1,6 @@
-package com.ferdi.fileCreator;
+package com.ferdiyondemli.fileCreator;
 
-import com.ferdi.fileCreator.fileComponent.*;
+import com.ferdiyondemli.fileCreator.fileComponent.*;
 import org.springframework.stereotype.Service;
 
 import java.io.File;

@@ -1,7 +1,7 @@
-package com.ferdi.restapi.controller;
+package com.ferdiyondemli.restapi.controller;
 
-import com.ferdi.fileCreator.fileComponent.RequestFile;
-import com.ferdi.restapi.service.RestApiFileCreatorService;
+import com.ferdiyondemli.fileCreator.fileComponent.RequestFile;
+import com.ferdiyondemli.restapi.service.RestApiFileCreatorService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

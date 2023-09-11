@@ -1,6 +1,6 @@
-package com.ferdi.hbs;
+package com.ferdiyondemli.hbs;
 
-import com.ferdi.fileCreator.fileComponent.JavaFile;
+import com.ferdiyondemli.fileCreator.fileComponent.JavaFile;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

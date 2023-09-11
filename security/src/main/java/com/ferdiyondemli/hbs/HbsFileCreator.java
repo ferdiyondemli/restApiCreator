@@ -1,9 +1,9 @@
-package com.ferdi.hbs;
+package com.ferdiyondemli.hbs;
 
-import com.ferdi.hbs.fileCreation.*;
-import com.ferdi.fileCreator.FileCreator;
-import com.ferdi.fileCreator.fileComponent.DirectoryFile;
-import com.ferdi.fileCreator.fileComponent.JavaFile;
+import com.ferdiyondemli.hbs.fileCreation.*;
+import com.ferdiyondemli.fileCreator.FileCreator;
+import com.ferdiyondemli.fileCreator.fileComponent.DirectoryFile;
+import com.ferdiyondemli.fileCreator.fileComponent.JavaFile;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

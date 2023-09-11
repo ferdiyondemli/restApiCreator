@@ -1,6 +1,6 @@
-package com.ferdi.hbs.fileCreation;
+package com.ferdiyondemli.hbs.fileCreation;
 
-import com.ferdi.fileCreator.fileComponent.*;
+import com.ferdiyondemli.fileCreator.fileComponent.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

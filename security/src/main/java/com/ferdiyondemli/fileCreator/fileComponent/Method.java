@@ -1,4 +1,4 @@
-package com.ferdi.fileCreator.fileComponent;
+package com.ferdiyondemli.fileCreator.fileComponent;
 
 import lombok.Getter;
 import lombok.Setter;
